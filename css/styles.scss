@@ -18,3 +18,104 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+
+
+@media (max-width: 768px) {
+	.carousel-inner .carousel-item > div {
+		display: none;
+	}
+	.carousel-inner .carousel-item > div:first-child {
+		display: block;
+	}
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+	display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+
+	.carousel-inner .carousel-item-right.active,
+	.carousel-inner .carousel-item-next {
+		transform: translateX(33.333%);
+	}
+
+	.carousel-inner .carousel-item-left.active,
+	.carousel-inner .carousel-item-prev {
+		transform: translateX(-33.333%);
+	}
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{
+	transform: translateX(0);
+}
+
+
+.review-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.review-text {
+	flex: 1;
+	max-width: 60%;
+}
+
+.review-image {
+	flex: 1;
+	max-width: 35%;
+}
+
+.review-image img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.review-button {
+	margin-top: 20px;
+}
+
+
+
+/* Custom styles for smaller "Hør som lydbog" cards */
+.small-card {
+	max-width: 280px; /* Reduce max width */
+	margin: auto;
+}
+.small-card img {
+	max-height: 250px; /* Reduce image height */
+	object-fit: cover;
+}
+
+body {
+	background-color: #e22a2b;
+	color: #fff; /* Ensures text stands out against the red background */
+	font-family: Arial, sans-serif;
+}
+
+.h1, h2 {
+	font-family: Georgia, serif;
+}
+
+.p {
+	font-family: Arial, sans-serif;
+}
+
+.btn-secondary {
+	background-color: #333;
+	color: #fff;
+	border: none;
+}
+
+.btn-secondary:hover {
+	background-color: #555;
+}
+
+.test{
+	background-color: pink;
+}
